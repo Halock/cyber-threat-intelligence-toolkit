@@ -1,0 +1,24 @@
+Sample Cyber Threat Intelligence Investigation
+
+The following indicators are simulated examples for testing.
+
+Observed network connection:
+192.0.2.10
+
+Suspicious web resource:
+https://example.test/login
+
+Associated domain:
+example.test
+
+Analyst contact:
+analyst@example.test
+
+Sample MD5:
+d41d8cd98f00b204e9800998ecf8427e
+
+Sample SHA1:
+356a192b7913b04c54574d18c28d46e6395428ab
+
+Sample SHA256:
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
