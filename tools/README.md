@@ -184,3 +184,45 @@ The tool retrieves available VirusTotal analysis statistics and provides a conci
 
 ```text
 python tools\virustotal_ip_checker.py <IPv4>
+
+
+## VirusTotal URL Intelligence Checker
+
+File: virustotal_url_checker.py
+
+The VirusTotal URL Intelligence Checker retrieves reputation and security analysis information for a supplied HTTP or HTTPS URL.
+
+### Usage
+
+python tools/virustotal_url_checker.py https://example.com
+
+### Capabilities
+
+The tool retrieves:
+
+- URL reputation score
+- Final URL after redirection
+- Page title
+- HTTP response status
+- Malicious detections
+- Suspicious detections
+- Harmless detections
+- Undetected results
+- Basic analyst assessment
+
+### Defensive Use
+
+The tool supports defensive cyber threat intelligence workflows by providing rapid reputation and detection information for URLs encountered during investigations, incident response, phishing analysis and threat hunting.
+
+The VirusTotal API key is loaded from a local .env file and is excluded from version control through .gitignore.
+
+### Technical Implementation
+
+- Python 3
+- VirusTotal API v3
+- curl.exe
+- python-dotenv
+- Base64 URL encoding
+- JSON response processing
+
+The implementation uses curl.exe --ssl-no-revoke to accommodate Windows environments where certificate revocation checks may fail because of network conditions.
