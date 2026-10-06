@@ -161,3 +161,26 @@ Future enhancements may include:
 * MITRE ATT&CK mapping
 * Structured JSON output
 * Analyst case-report generation
+## VirusTotal IP Intelligence Checker
+
+### Description
+
+`virustotal_ip_checker.py` is a defensive cyber threat intelligence utility that queries VirusTotal for reputation and analysis information associated with an IPv4 address.
+
+The tool retrieves available VirusTotal analysis statistics and provides a concise analyst assessment.
+
+### Features
+
+- Queries VirusTotal IP intelligence.
+- Retrieves IP reputation information.
+- Reports malicious detections.
+- Reports suspicious detections.
+- Reports harmless and undetected results.
+- Provides a basic CTI analyst assessment.
+- Loads the VirusTotal API key securely from a local `.env` file.
+- Prevents the API key from being committed through `.gitignore`.
+
+### Usage
+
+```text
+python tools\virustotal_ip_checker.py <IPv4>
