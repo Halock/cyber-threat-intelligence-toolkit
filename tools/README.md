@@ -226,3 +226,51 @@ The VirusTotal API key is loaded from a local .env file and is excluded from ver
 - JSON response processing
 
 The implementation uses curl.exe --ssl-no-revoke to accommodate Windows environments where certificate revocation checks may fail because of network conditions.
+
+## VirusTotal Hash Intelligence Checker
+
+File: virustotal_hash_checker.py
+
+The VirusTotal Hash Intelligence Checker retrieves reputation and security analysis information for file hashes.
+
+Supported hash formats:
+
+- MD5
+- SHA-1
+- SHA-256
+
+### Usage
+
+python tools/virustotal_hash_checker.py d41d8cd98f00b204e9800998ecf8427e
+
+### Capabilities
+
+The tool retrieves:
+
+- File hash type
+- File name
+- File type
+- File size
+- Reputation score
+- Malicious detections
+- Suspicious detections
+- Harmless detections
+- Undetected results
+- Basic analyst assessment
+
+### Defensive Use
+
+The tool supports defensive cyber threat intelligence workflows by providing rapid file reputation and detection information during malware analysis, incident response, digital forensic investigations and threat hunting.
+
+The VirusTotal API key is loaded from a local .env file and is excluded from version control through .gitignore.
+
+### Technical Implementation
+
+- Python 3
+- VirusTotal API v3
+- curl.exe
+- python-dotenv
+- Regular expression hash validation
+- JSON response processing
+
+The implementation uses curl.exe --ssl-no-revoke to accommodate Windows environments where certificate revocation checks may fail because of network conditions.
